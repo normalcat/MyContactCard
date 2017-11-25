@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ContactCard</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" type="text/css" href="ContactCard_style.css">
+	</head>
+
+	<script>
+		$(document).ready(function(){
+			var fname;
+			var lname;
+			var desc;
+			$("form").submit(function(){
+				fname=$('input[name="fname"]').val();
+				lname=$('input[name="lname"]').val();
+				desc=$('textarea').val();
+				$("#right").append("<div id='card'>"+fname+" "+lname+"<p>"+desc+"</p></div>");
+
+				$("#fname").val("");
+				$("#lname").val("");
+				$("#desc").val("");
+				return false;
+			});
+
+			$(document).on('click',"#card",function(){
+				$(this).children().toggle(function(){
+					$("p").css("color","red");
+				});
+			});
+		});
+
+	</script>
+	<body>
+		<div id="left">
+			<form id=form1>
+				First Name: <input type="text" name="fname" id="fname"><br>
+				Last Name: <input type="text" name="lname" id="lname"><br>
+				Description: <textarea name="desc" id="desc"></textarea>
+				<input type="submit" value="Add User">
+			</form>
+		</div>
+		<div id="right">
+		</div>
+	</body>
+</html>

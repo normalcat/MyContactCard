@@ -1,0 +1,42 @@
+*{
+	margin: 0px;
+	padding-left: 0px;
+}
+
+textarea{
+	width:200px;
+	height:50px;
+}
+
+#left{
+	margin-top:25px;
+	margin-left:25px;
+	width:300px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#right{
+	margin-top:25px;
+	margin-left:25px;
+	width:300px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#card{
+	margin-top:10px;
+	width:200px;
+	height:50px;
+	background-color: blue;
+}
+
+#info{
+	width:150px;
+	height:30px;
+	background-color: red;
+}
+
+p{
+	color:blue;
+}
